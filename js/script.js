@@ -1,29 +1,30 @@
-const names = ['Izzy', 'Matt', 'City', 'Kandyce'];
+const notes = ['JS is cool', 'create a constant with const', 'use the src attribute on the script tag to load a js file'];
 
-function printNames() {
-    const someVal = 'this is a val'
-    for (let index = 0; index < names.length; index++) {
-        console.log(names[index]);
-    }
-}
+console.log(notes);
 
-function add(num1, num2) {
-console.log(num1+num2);
-}
+// adds an item to the end of the array
+notes.push('Copilot is a great help');
 
-function add(num1,num2){
-return num1 + num2;
-}
+console.log(notes);
 
-const result = add(3,10);
+// adds an item to the beginning of the array
+notes.unshift('CSS is crazy');
 
-console.log(result);
+console.log(notes);
 
-// add(10,5);
-// add(20,100);
-// add(50,5);
+// pop removes the last item in the array
+notes.pop();
 
-// function printVals(str,bool,num, arr){console.log(arr[1]);
-// }
+console.log(notes);
 
-// printVals ('some string', true, 15, ['Michael', 'Nina', 'Roman']);
+// shift removes the first item from the array
+notes.shift();
+
+console.log(notes);
+
+const notes2=notes;
+
+// to remove an item at a certain index, we use splice
+// you pass in the index of where you wan to start deleting and then the amount of items you want to remove
+notes.splice(1, 1);
+console.log(notes2);
