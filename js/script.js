@@ -1,8 +1,9 @@
-// Arrays are not primitive value types
-// They are reference types
-const fruits = ['apple', 'orange','kiwi' ,'grape', 'banana', 'blueberry', 'strawberry', 'plantain'];
-const data = ['Kandyce', "Mbua", 35, ['pickleball', 'fishing']];
+const names = ['Izzy', 'Matt', 'City', 'Kandyce'];
 
-for (let index = 0; index < fruits.length; index ++) {
-console.log(fruits[index]);
+function printNames() {
+    for (let index = 0; index < names.length; index++) {
+        console.log(names[index]);
+    }
 }
+
+printNames();
