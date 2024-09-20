@@ -1,30 +1,34 @@
-const notes = ['JS is cool', 'create a constant with const', 'use the src attribute on the script tag to load a js file'];
+const userData = {
+    name: 'JD',
+    age: 44,
+    phone: '777-777-7777',
+    address: '555 coding st',
+    info: {
+        location: 'Atlanta area',
+        hobbies: ['pickleball', 'fishing']
+    },
 
-console.log(notes);
+    printAge: function () {
+        console.log(this.age);
+    },
+    haveBirthday: function () {
+        this.age++;
+        console.log("Happy Birthday");
+    },
+    addHobby: function (hobby) {
+        // Need to reference an argument that is passed to addHobby (string of a hobby)
+        this.info.hobbies.push(hobby);
+    },
+    // Push the argument(hobby) to the info.hobbies array
+    printHobbies: function() {
+        // console.log the hobbies array
+        console.log(this.info.hobbies);
+        // BONUS - Loop over the hobbies array and console.log each hobby
+        for (let i = 0; i < this.info.hobbies.length; i++) {
+            console.log(this.info.hobbies[i]);
+        }
+    }
+}
 
-// adds an item to the end of the array
-notes.push('Copilot is a great help');
-
-console.log(notes);
-
-// adds an item to the beginning of the array
-notes.unshift('CSS is crazy');
-
-console.log(notes);
-
-// pop removes the last item in the array
-notes.pop();
-
-console.log(notes);
-
-// shift removes the first item from the array
-notes.shift();
-
-console.log(notes);
-
-const notes2=notes;
-
-// to remove an item at a certain index, we use splice
-// you pass in the index of where you wan to start deleting and then the amount of items you want to remove
-notes.splice(1, 1);
-console.log(notes2);
+userData.addHobby('traveling');
+userData.printHobbies()
